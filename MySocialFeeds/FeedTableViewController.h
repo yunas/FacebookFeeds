@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GTScrollNavigationBar.h"
+
 
 @interface FeedTableViewController : UITableViewController <UISearchBarDelegate>
 

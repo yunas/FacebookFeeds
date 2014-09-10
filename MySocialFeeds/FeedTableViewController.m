@@ -14,6 +14,7 @@
 #import "NSDate+MySocialFeeds.h"
 #import "UITableView+wave.h"
 #import "MBProgressHUD.h"
+#import "GTScrollNavigationBar.h"
 
 
 
@@ -195,14 +196,14 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     CGFloat height = 90;
     
-//    static FeedTableViewCell *feedCell = nil;
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken,^{
-//        feedCell = [self.tableView dequeueReusableCellWithIdentifier:@"FeedTableViewCell"];
-//    });
-//    
-//    [self setCellData:feedCell WithObject:filteredFeeds[indexPath.row]];
-//    height = [self calculateHeightForCell:feedCell];
+    static FeedTableViewCell *feedCell = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken,^{
+        feedCell = [self.tableView dequeueReusableCellWithIdentifier:@"FeedTableViewCell"];
+    });
+    
+    [self setCellData:feedCell WithObject:filteredFeeds[indexPath.row]];
+    height = [self calculateHeightForCell:feedCell];
     
     return height;
 }
@@ -237,7 +238,12 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    Feed *feed = socialFeeds[indexPath.row];
     
+    NSLog(@"%@",feed.link);
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:feed.link]];
+
 }
 
 
