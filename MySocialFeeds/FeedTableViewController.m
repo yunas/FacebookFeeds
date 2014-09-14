@@ -171,8 +171,7 @@
         [cell.lblDetail setText:feed.title];
     }
     
-
-    [cell.imageView setImageWithURL:[NSURL URLWithString:feed.imageLink]];
+    [cell.imgViewFeed setImageWithURL:[NSURL URLWithString:feed.imageLink]];
 
 }
 
