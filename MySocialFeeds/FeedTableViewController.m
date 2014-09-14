@@ -62,7 +62,6 @@
     [searchBar setDelegate:self];
     [self.navigationController.navigationBar addSubview:searchBar];
     self.navigationController.scrollNavigationBar.scrollView = self.tableView;
-//    [self.navigationController.scrollNavigationBar setScrollView:self.tableView];
 }
 
 #pragma mark - Standard Methods
@@ -172,7 +171,7 @@
     }
     
 
-    [cell.imageView setImageWithURL:[NSURL URLWithString:feed.imageLink]];
+    [cell.imgViewFeed setImageWithURL:[NSURL URLWithString:feed.imageLink]];
 
 }
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>61C8BA00-AE34-494E-B6AF-AC3AF6629DEC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MySocialFeeds</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0E38AEDF-A471-468B-B189-3D2FFC97A322</key>
+		<string>https://github.com/yunas/FacebookFeeds.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MySocialFeeds.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0E38AEDF-A471-468B-B189-3D2FFC97A322</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yunas/FacebookFeeds.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0E38AEDF-A471-468B-B189-3D2FFC97A322</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0E38AEDF-A471-468B-B189-3D2FFC97A322</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MySocialFeeds</string>
+		</dict>
+	</array>
+</dict>
+</plist>
