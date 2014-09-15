@@ -10,8 +10,8 @@
 #import "Feed.h"
 
 #define kFBGraphURL     @"https://graph.facebook.com/"
-#define kFBAPP_ID       @"546062422104406"
-#define kFBAPP_SECRET   @"b4b96d7d1670e085ddffc8094f7f759f"
+#define kFBAPP_ID       @""
+#define kFBAPP_SECRET   @""
 
 #define kFBGraphPageURL @"https://graph.facebook.com/dubizzle/feed?type=normal&access_token="
 //I have used normal here to get refined images, else I can work with low size (130x130) small images too
