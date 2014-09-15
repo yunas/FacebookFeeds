@@ -94,7 +94,7 @@ typedef enum {
 
 //SET LINK
     if (type == POST_TYPE_STATUS) {
-        [self setLink:[NSString stringWithFormat:@"%@%@",dict[@"https://www.facebook.com/"],dict[@"id"]]];
+        [self setLink:[NSString stringWithFormat:@"%@%@",@"https://www.facebook.com/",dict[@"id"]]];
     }
     else if (type == POST_TYPE_PHOTO || type == POST_TYPE_ADDED_PHOTOS || type == POST_TYPE_SHARED_STORY || type == POST_TYPE_LINK){
         [self setLink:dict[@"link"]];
