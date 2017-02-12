@@ -9,6 +9,7 @@
 #import "FeedTableViewController.h"
 #import "ServiceManager.h"
 #import "Feed.h"
+#import "DLFeed.h"
 #import "FeedTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "NSDate+MySocialFeeds.h"
@@ -54,6 +55,30 @@
     }];
 }
 
+
+
+-(void) getDigialLogixFeeds{
+    
+    UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+    
+    [MBProgressHUD showHUDAddedTo:window animated:YES];
+    
+    ServiceManager *manager = [ServiceManager new];
+    [manager getDigitalLogixFeeds:^(NSArray *feedsArr) {
+        //code
+        socialFeeds = [[NSMutableArray alloc]initWithArray:feedsArr];
+        filteredFeeds = [[NSMutableArray alloc]initWithArray:feedsArr];
+        [self.tableView reloadDataAnimateWithWave:LeftToRightWaveAnimation];
+        [MBProgressHUD hideHUDForView:window animated:YES];
+
+    } failure:^(NSError *error) {
+        [MBProgressHUD hideHUDForView:window animated:YES];
+        NSLog(@"%@",error.localizedDescription);
+    }];
+}
+
+
+
 #pragma mark - CUSTOM UI MODIFICATION
 
 
@@ -83,7 +108,8 @@
 
     [self initContentView];
 
-    [self getSocialFeeds];
+//    [self getSocialFeeds];
+    [self getDigialLogixFeeds];
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -112,7 +138,7 @@
     
     
     text = [text stringByReplacingOccurrencesOfString:@"'" withString:@"\\'"];
-    NSString *strPredicate = [NSString stringWithFormat:@"title contains [c] '%@' ",text];
+    NSString *strPredicate = [NSString stringWithFormat:@"event contains [c] '%@' ",text];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:strPredicate];
     [filteredFeeds removeAllObjects];
     
@@ -159,21 +185,39 @@
 #pragma mark - Table view Helper methods
 
 
-
--(void) setCellData:(FeedTableViewCell*)cell WithObject:(Feed*)feed{
+-(void) setCellData:(FeedTableViewCell*)cell WithObject:(DLFeed*)feed{
     
-    [cell.lblTitle setText:[feed.dateCreated toStringWithFormat:DATEFORMAT_MYSOCIALFEEDS_CUSTOM]];
     
-    if (feed.title.length > 200) {
-        [cell.lblDetail setText:[NSString stringWithFormat:@"%@...",[feed.title substringFromIndex:200]]];
-    }
-    else{
-        [cell.lblDetail setText:feed.title];
-    }
+    
+//    if (feed.event.length > 200) {
+//        [cell.lblEventName setText:[NSString stringWithFormat:@"%@...",[feed.event substringFromIndex:200]]];
+//    }
+//    else{
+    [cell.lblEventName setText:feed.event];
+    [cell.lblCategory setText:feed.category];
+    [cell.lblLocation setText:feed.location];
+    [cell.lblDate setText:[feed.date toStringWithFormat:DATEFORMAT_MYSOCIALFEEDS_DIGITAL_LOGIX]];
+    
+//    }
     
     [cell.imgViewFeed setImageWithURL:[NSURL URLWithString:feed.imageLink]];
-
+    
 }
+
+//-(void) setCellData:(FeedTableViewCell*)cell WithObject:(Feed*)feed{
+//    
+//    [cell.lblDate setText:[feed.dateCreated toStringWithFormat:DATEFORMAT_MYSOCIALFEEDS_DIGITAL_LOGIX]];
+//    
+//    if (feed.title.length > 200) {
+//        [cell.lblDetail setText:[NSString stringWithFormat:@"%@...",[feed.title substringFromIndex:200]]];
+//    }
+//    else{
+//        [cell.lblDetail setText:feed.title];
+//    }
+//    
+//    [cell.imgViewFeed setImageWithURL:[NSURL URLWithString:feed.imageLink]];
+//
+//}
 
 
 -(CGFloat) calculateHeightForCell:(FeedTableViewCell*)cell {
@@ -237,11 +281,11 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    Feed *feed = socialFeeds[indexPath.row];
+    DLFeed *feed = socialFeeds[indexPath.row];
     
-    NSLog(@"%@",feed.link);
+    NSLog(@"%@",feed.imageLink);
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:feed.link]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:feed.imageLink]];
 
 }
 

@@ -9,6 +9,7 @@
 #import "ServiceManager.h"
 #import "FacebookService.h"
 #import "DBFBService.h"
+#import "DigitalLogixService.h"
 
 
 @implementation ServiceManager
@@ -40,5 +41,22 @@
     
     
 }
+
+
+-(void) getDigitalLogixFeeds:(void (^)(NSArray *feedsArr))successBlock
+                     failure:(void (^)(NSError *error))failureBlock{
+
+    DigitalLogixService *dlService = [DigitalLogixService new];
+    [dlService getFeeds:^(NSArray *feedsArr) {
+        //code
+        NSLog(@"FEEDS from Server");
+        successBlock(feedsArr);
+    } failure:^(NSError *error) {
+        //        code
+        failureBlock(error);
+    }];
+
+}
+
 
 @end

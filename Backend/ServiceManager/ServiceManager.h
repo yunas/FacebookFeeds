@@ -12,7 +12,11 @@
 
 
 -(void) getSocialFeeds:(void (^)(NSArray *feedsArr))successBlock
-                    failure:(void (^)(NSError *error))failureBlock;
+               failure:(void (^)(NSError *error))failureBlock;
+
+
+-(void) getDigitalLogixFeeds:(void (^)(NSArray *feedsArr))successBlock
+                     failure:(void (^)(NSError *error))failureBlock;
 
 
 

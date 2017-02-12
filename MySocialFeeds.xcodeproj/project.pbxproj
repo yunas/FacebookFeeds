@@ -52,6 +52,10 @@
 		457BC99719BF58140072378E /* NSDate+MySocialFeeds.m in Sources */ = {isa = PBXBuildFile; fileRef = 457BC99619BF58140072378E /* NSDate+MySocialFeeds.m */; };
 		4585592919BF768700F1DC4D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585592819BF768700F1DC4D /* MBProgressHUD.m */; };
 		4585592D19BF77D900F1DC4D /* DBFBService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585592C19BF77D900F1DC4D /* DBFBService.m */; };
+		8FE22BC31E4FA299003F06FC /* DigitalLogixService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE22BC21E4FA299003F06FC /* DigitalLogixService.m */; };
+		8FE22BC41E4FA299003F06FC /* DigitalLogixService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE22BC21E4FA299003F06FC /* DigitalLogixService.m */; };
+		8FE22BC61E4FA6A4003F06FC /* DLFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE22BC51E4FA6A4003F06FC /* DLFeed.m */; };
+		8FE22BC71E4FA6A4003F06FC /* DLFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE22BC51E4FA6A4003F06FC /* DLFeed.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +150,10 @@
 		4585592819BF768700F1DC4D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		4585592B19BF77D900F1DC4D /* DBFBService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBFBService.h; path = DBFBService/DBFBService.h; sourceTree = "<group>"; };
 		4585592C19BF77D900F1DC4D /* DBFBService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBFBService.m; path = DBFBService/DBFBService.m; sourceTree = "<group>"; };
+		8FE22BC11E4FA299003F06FC /* DigitalLogixService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DigitalLogixService.h; path = DigitalLogixService/DigitalLogixService.h; sourceTree = "<group>"; };
+		8FE22BC21E4FA299003F06FC /* DigitalLogixService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DigitalLogixService.m; path = DigitalLogixService/DigitalLogixService.m; sourceTree = "<group>"; };
+		8FE22BC51E4FA6A4003F06FC /* DLFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFeed.m; sourceTree = "<group>"; };
+		8FE22BC81E4FA6B9003F06FC /* DLFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFeed.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +305,8 @@
 			children = (
 				457BC97E19BF4FCB0072378E /* Feed.h */,
 				457BC97F19BF4FCB0072378E /* Feed.m */,
+				8FE22BC81E4FA6B9003F06FC /* DLFeed.h */,
+				8FE22BC51E4FA6A4003F06FC /* DLFeed.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -304,6 +314,7 @@
 		457BC92F19BF4E7D0072378E /* NetworkClasses */ = {
 			isa = PBXGroup;
 			children = (
+				8FE22BC01E4FA242003F06FC /* DigitalLogixService */,
 				457BC98C19BF52BB0072378E /* FacebookService */,
 				457BC93019BF4E7D0072378E /* NetworkBaseService.h */,
 				457BC93119BF4E7D0072378E /* NetworkBaseService.m */,
@@ -460,6 +471,15 @@
 			name = DBFBService;
 			sourceTree = "<group>";
 		};
+		8FE22BC01E4FA242003F06FC /* DigitalLogixService */ = {
+			isa = PBXGroup;
+			children = (
+				8FE22BC11E4FA299003F06FC /* DigitalLogixService.h */,
+				8FE22BC21E4FA299003F06FC /* DigitalLogixService.m */,
+			);
+			name = DigitalLogixService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -565,6 +585,7 @@
 				457BC90219BF4E640072378E /* AppDelegate.m in Sources */,
 				457BC96819BF4E7D0072378E /* AFURLConnectionOperation.m in Sources */,
 				457BC97119BF4E7D0072378E /* UIProgressView+AFNetworking.m in Sources */,
+				8FE22BC31E4FA299003F06FC /* DigitalLogixService.m in Sources */,
 				457BC98B19BF525B0072378E /* ServiceManager.m in Sources */,
 				457BC96519BF4E7D0072378E /* AFHTTPSessionManager.m in Sources */,
 				457BC96919BF4E7D0072378E /* AFURLRequestSerialization.m in Sources */,
@@ -583,6 +604,7 @@
 				457BC96E19BF4E7D0072378E /* UIAlertView+AFNetworking.m in Sources */,
 				457BC97319BF4E7D0072378E /* UIWebView+AFNetworking.m in Sources */,
 				457BC96D19BF4E7D0072378E /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				8FE22BC61E4FA6A4003F06FC /* DLFeed.m in Sources */,
 				457BC96419BF4E7D0072378E /* AFHTTPRequestOperationManager.m in Sources */,
 				457BC97219BF4E7D0072378E /* UIRefreshControl+AFNetworking.m in Sources */,
 				457BC97D19BF4F7B0072378E /* MySocialFeeds.xcdatamodeld in Sources */,
@@ -597,6 +619,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE22BC71E4FA6A4003F06FC /* DLFeed.m in Sources */,
+				8FE22BC41E4FA299003F06FC /* DigitalLogixService.m in Sources */,
 				457BC91D19BF4E640072378E /* MySocialFeedsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

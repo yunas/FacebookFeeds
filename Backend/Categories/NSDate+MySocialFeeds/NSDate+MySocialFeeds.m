@@ -22,6 +22,11 @@
     else if (format == DATEFORMAT_MYSOCIALFEEDS_CUSTOM){
         dateFormatStr = @"dd/MM/YYYY";
     }
+    else if (format == DATEFORMAT_MYSOCIALFEEDS_DIGITAL_LOGIX){
+        dateFormatStr = @"dd/MM/yyyy HH:mm tt";
+//        10/02/2017 10:14 PM
+    }
+    
     
     return dateFormatStr;
 }

@@ -9,7 +9,8 @@
 #import "NetworkBaseService.h"
 #import "AFHTTPRequestOperationManager.h"
 
-NSString *const kApp_BaseUrl = @"http://omo.akamai.opta.net/";
+//NSString *const kApp_BaseUrl = @"http://omo.akamai.opta.net/";
+NSString *const kApp_BaseUrl = @"http://dlworkspace.com/mobileapp/eventlistservice.php";
 
 @implementation NetworkBaseService
 

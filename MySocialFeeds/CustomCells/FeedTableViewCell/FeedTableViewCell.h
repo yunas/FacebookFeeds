@@ -10,9 +10,12 @@
 
 @interface FeedTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) IBOutlet UIImageView *imgViewFeed;
-@property (nonatomic, strong) IBOutlet UILabel     *lblTitle;
-@property (nonatomic, strong) IBOutlet UILabel     *lblDetail;
 
+@property (nonatomic, strong) IBOutlet UIImageView *imgViewFeed;
+@property (nonatomic, strong) IBOutlet UILabel     *lblCategory;
+@property (nonatomic, strong) IBOutlet UILabel     *lblLocation;
+@property (nonatomic, strong) IBOutlet UILabel     *lblEventName;
+@property (nonatomic, strong) IBOutlet UILabel     *lblDate;
+@property (nonatomic, strong) IBOutlet UIButton     *btnDetail;
 
 @end
