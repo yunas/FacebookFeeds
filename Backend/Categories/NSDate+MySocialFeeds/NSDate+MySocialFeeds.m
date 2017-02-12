@@ -23,7 +23,7 @@
         dateFormatStr = @"dd/MM/YYYY";
     }
     else if (format == DATEFORMAT_MYSOCIALFEEDS_DIGITAL_LOGIX){
-        dateFormatStr = @"dd/MM/yyyy HH:mm tt";
+        dateFormatStr = @"dd/MM/YYYY hh:mm a";
 //        10/02/2017 10:14 PM
     }
     

@@ -26,7 +26,7 @@
     [self setFeedId:dict[@"id"]];
     [self setLocation:dict[@"location"]];
     [self setImageLink:dict[@"picturename"]];
-    [self setDate:[NSDate dateWithFormat:DATEFORMAT_FACEBOOK fromString:dict[@"date"]]];
+    [self setDate:[NSDate dateWithFormat:DATEFORMAT_MYSOCIALFEEDS_DIGITAL_LOGIX fromString:dict[@"date"]]];
     
 }
 

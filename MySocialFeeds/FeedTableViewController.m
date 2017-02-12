@@ -179,6 +179,22 @@
 
 
 
+#pragma mark - IBACTIONS
+
+- (IBAction) openOptions:(UIButton*)sender{
+
+    NSLog(@"Feed ID:%ld",sender.tag);
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Options"
+                                                        message:@""
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"Open",
+                              @"Add Event",
+                              @"Add as Favorite",
+                              @"Recommend",nil];
+    [alertView show];
+}
 
 
 
@@ -188,17 +204,13 @@
 -(void) setCellData:(FeedTableViewCell*)cell WithObject:(DLFeed*)feed{
     
     
-    
-//    if (feed.event.length > 200) {
-//        [cell.lblEventName setText:[NSString stringWithFormat:@"%@...",[feed.event substringFromIndex:200]]];
-//    }
-//    else{
     [cell.lblEventName setText:feed.event];
     [cell.lblCategory setText:feed.category];
     [cell.lblLocation setText:feed.location];
     [cell.lblDate setText:[feed.date toStringWithFormat:DATEFORMAT_MYSOCIALFEEDS_DIGITAL_LOGIX]];
+    [cell.btnDetail addTarget:self action:@selector(openOptions:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.btnDetail setTag:(NSInteger)feed.feedId];
     
-//    }
     
     [cell.imgViewFeed setImageWithURL:[NSURL URLWithString:feed.imageLink]];
     
