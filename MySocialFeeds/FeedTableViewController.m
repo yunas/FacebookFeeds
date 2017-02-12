@@ -236,20 +236,20 @@
     return 90;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CGFloat height = 90;
-    
-    static FeedTableViewCell *feedCell = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken,^{
-        feedCell = [self.tableView dequeueReusableCellWithIdentifier:@"FeedTableViewCell"];
-    });
-    
-    [self setCellData:feedCell WithObject:filteredFeeds[indexPath.row]];
-    height = [self calculateHeightForCell:feedCell];
-    
-    return height;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    CGFloat height = 90;
+//    
+//    static FeedTableViewCell *feedCell = nil;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken,^{
+//        feedCell = [self.tableView dequeueReusableCellWithIdentifier:@"FeedTableViewCell"];
+//    });
+//    
+//    [self setCellData:feedCell WithObject:filteredFeeds[indexPath.row]];
+//    height = [self calculateHeightForCell:feedCell];
+//    
+//    return height;
+//}
 
 
 
